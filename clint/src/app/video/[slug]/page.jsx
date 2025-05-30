@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import VideoPlayer from '@/components/VideoPlayer';
 import VideoCard from '@/components/VideoCard';
 import { FaShare } from "react-icons/fa";
-import Head from 'next/head';
 
 const videos = [
   {

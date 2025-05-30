@@ -6,7 +6,7 @@ const videos = Array.from({ length: 100 }, (_, i) => ({
 const categories = ['desi', 'bhabhi', 'indian', 'school'];
 
 export async function GET() {
-  const baseUrl = 'https://your-domain.com'; // change to your real domain
+  const baseUrl = 'https://hotdesibhabi.com'; // change to your real domain
 
   const staticPages = [`${baseUrl}/`];
 
