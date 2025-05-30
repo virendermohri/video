@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react'
-const page = () => {
+const Page = () => {
     const [formData, setFormData] = useState({ videotitle: "", videoTag: "", thumbnailUrl: "", videoDescription: "", categories: [], videoUrl: "" });
     const adultCategories = [
         "Desi",
@@ -119,4 +119,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
