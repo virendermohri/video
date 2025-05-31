@@ -274,7 +274,7 @@ function getPaginationPages(currentPage, totalPages) {
     if (currentPage <= 2) {
       pages.push(1, 2, 3, '...', totalPages);
     } else if (currentPage >= totalPages - 1) {
-      pages.push(1,'...', totalPages - 2, totalPages - 1, totalPages);
+      pages.push(1, '...', totalPages - 2, totalPages - 1, totalPages);
     } else {
       pages.push(1, '...', currentPage, '...', totalPages);
     }
@@ -308,15 +308,15 @@ export default async function HomePage({ searchParams }) {
   const mixedItems = [];
   paginatedVideos.forEach((video, index) => {
     mixedItems.push({ type: 'video', data: video });
-    if ((index + 1) %5 === 0) {
+    if ((index + 1) % 5 === 0) {
       mixedItems.push({ type: 'ad', data: { id: `ad-${index}` } });
     }
   });
 
   return (
-    <div className="max-w-4xl border mx-auto px-4 py-6 text-white">
-     
+    <div className="max-w-4xl   mx-auto px-4 py-6 text-white">
 
+     
       {/* <h1 className="text-2xl md:text-3xl font-bold mb-4">Trending Free Porn Videos</h1> */}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-10">
@@ -324,7 +324,7 @@ export default async function HomePage({ searchParams }) {
           item.type === 'video' ? (
             <VideoCard key={item.data.id} video={item.data} />
           ) : (
-            <AdBanner src={"kkk"}  key={item.data.id} />
+            <AdBanner src={"kkk"} key={item.data.id} />
           )
         )}
       </div>
@@ -341,7 +341,7 @@ export default async function HomePage({ searchParams }) {
         )}
         {pagination.map((p, idx) =>
           p === '...' ? (
-            <span key={idx+Math.floor(Math.random*9999)} className="px-3 py-2 text-gray-400">...</span>
+            <span key={idx + Math.floor(Math.random * 9999)} className="px-3 py-2 text-gray-400">...</span>
           ) : (
             <a
               key={p}
@@ -349,7 +349,7 @@ export default async function HomePage({ searchParams }) {
               className={`px-3 py-2 rounded ${p === currentPage
                 ? 'bg-blue-700 text-white font-bold'
                 : 'text-white bg-black hover:bg-blue-600'
-              }`}
+                }`}
             >
               {p}
             </a>

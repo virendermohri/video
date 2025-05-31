@@ -20,9 +20,9 @@ export default function Navbar() {
 const pathname = usePathname();
   return (
     <header className={`text-white ${pathname==="/advertise"?" hidden ":" block "}  z-50`}>
-      <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+      <div className="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-3xl flex font-bold ">
+        <Link href="/" className="text-2xl flex font-bold ">
           <p className='px-2 py-1 '>Desi</p><p className='px-2 shadow-2xl rounded py-1 bg-blue-500'>Bhabi</p>
         </Link>
 
