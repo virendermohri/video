@@ -274,7 +274,7 @@ function getPaginationPages(currentPage, totalPages) {
     if (currentPage <= 2) {
       pages.push(1, 2, 3, '...', totalPages);
     } else if (currentPage >= totalPages - 1) {
-      pages.push(1, '...', totalPages - 2, totalPages - 1, totalPages);
+      pages.push(1,'...', totalPages - 2, totalPages - 1, totalPages);
     } else {
       pages.push(1, '...', currentPage, '...', totalPages);
     }
@@ -314,22 +314,17 @@ export default async function HomePage({ searchParams }) {
   });
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6 text-white">
-      {/* Ad Banner */}
-      <iframe
-        className="w-full h-24 md:h-28 mb-6"
-        src="https://your-ad-provider.com/ad"
-        title="Ad Banner"
-      ></iframe>
+    <div className="max-w-4xl border mx-auto px-4 py-6 text-white">
+     
 
-      <h1 className="text-2xl md:text-3xl font-bold mb-4">Trending Free Porn Videos</h1>
+      {/* <h1 className="text-2xl md:text-3xl font-bold mb-4">Trending Free Porn Videos</h1> */}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-10">
         {mixedItems.map((item, idx) =>
           item.type === 'video' ? (
             <VideoCard key={item.data.id} video={item.data} />
           ) : (
-            <AdBanner key={item.data.id} />
+            <AdBanner src={"kkk"}  key={item.data.id} />
           )
         )}
       </div>
